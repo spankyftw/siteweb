@@ -1,0 +1,252 @@
+@media (max-width:1199.98px) {
+    .container {
+        max-width: 96%
+    }
+    html {
+        font-size: .5rem
+    }
+    .man_1 {
+        width: 35rem
+    }
+    .man_2 {
+        right: 12%;
+        width: 28rem
+    }
+    .tab-content {
+        margin-left: -53rem
+    }
+}
+
+@media (max-width:991px) {
+    .box_content {
+        padding-left: 0
+    }
+    html {
+        font-size: .65vw
+    }
+    .tab-content {
+        margin-left: -30rem
+    }
+    .man_1 {
+        width: 55rem
+    }
+    .man_2 {
+        width: 45rem;
+        right: 8%
+    }
+}
+
+@media (max-width:767.98px) {
+    html {
+        font-size: 1.65vw
+    }
+    #fullpage {
+        overflow: hidden
+    }
+    .section {
+        position: relative;
+        padding: 26rem 0
+    }
+    .hero-bottom-sec-hlc {
+        top: 3%
+    }
+    .footer-center-images {
+        display: none
+    }
+    .section:before {
+        background-image: url(../img/overlay_small.webp)
+    }
+    .logo_wrap p {
+        display: none
+    }
+    .text_box:before {
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%)
+    }
+    .text_box {
+        padding: 5rem 4rem
+    }
+    .social_icons li a {
+        width: 10rem;
+        height: 10rem;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%)
+    }
+    .social_icons {
+        margin-left: 0;
+        margin-bottom: 0;
+        transform: rotate(0)
+    }
+    .social_icons li {
+        margin-left: 0;
+        margin-bottom: 1rem !important;
+        margin-right: 1rem
+    }
+    .social_icons li a img {
+        transform: rotate(0)
+    }
+    .tree_img {
+        z-index: 0
+    }
+    .scroll_down {
+        display: none
+    }
+    .button {
+        min-width: 13.6rem;
+        font-size: 1.8rem
+    }
+    .hero_section {
+        padding: 18rem 0 48rem
+    }
+    .text_box p,
+    body {
+        font-size: max(1.9rem, 12px);
+        line-height: 1.55
+    }
+    .gta_img {
+        left: 10%;
+        top: max(61vh, 100%);
+        width: 36vh
+    }
+    .man_1 {
+        right: 32%;
+        width: 36rem;
+        display: none
+    }
+    .man_2 {
+        right: 6%;
+        width: 28rem;
+        display: none
+    }
+    .product-box {
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        margin: 1.8rem 0 0 auto;
+        width: 100%
+    }
+    .gun-box-left {
+        width: 100%;
+        margin-right: 0;
+        margin-top: 2rem;
+        margin-bottom: 2rem
+    }
+    .gun-box-right {
+        width: 100%;
+        margin-left: 0
+    }
+    .gun-box-text p,
+    .product-box-right p {
+        width: 26.7rem
+    }
+    .gun-box-text h1,
+    .product-box-right h1 {
+        font-size: max(3rem, 12px)
+    }
+    .hero-bottom-sec-hlc {
+        width: 27rem
+    }
+    .gun-box-images-right img {
+        width: 25rem;
+        margin-left: 7.3rem;
+        margin-top: 0
+    }
+    .about-header h1 {
+        text-align: center;
+        margin-bottom: 4rem
+    }
+    .about-header h1 span {
+        display: none
+    }
+    .about-tab-box {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap
+    }
+    .tab-content {
+        width: 100%
+    }
+    .about-left-img img {
+        display: none
+    }
+    .tab-content .about-tab-content {
+        width: 100%
+    }
+    .about_text p {
+        max-width: 33rem
+    }
+    .about_text {
+        padding: 0 0 3rem 3.5rem
+    }
+    .about_text h4 {
+        font-size: max(3rem, 12px)
+    }
+    .about-tab-box ul {
+        width: 100%
+    }
+    .about-tab-box ul li,
+    .about-tab-box ul li:first-child,
+    .about-tab-box ul li:nth-child(2) {
+        margin-left: 0;
+        width: 100%
+    }
+    .tab_link {
+        width: 100%;
+        height: 28rem
+    }
+    .about-tab-text {
+        padding: 0 0 1.7rem 8rem
+    }
+    .about-tab-text p {
+        font-size: 2.4rem
+    }
+    footer {
+        text-align: center
+    }
+    footer .logo_wrap {
+        -ms-flex-pack: center;
+        justify-content: center;
+        margin-bottom: 2rem
+    }
+    .logo_wrap img {
+        margin-right: 0
+    }
+    .about-header h2 span {
+        display: none
+    }
+    .footer-menu {
+        text-align: center
+    }
+    .footer-menu ul li {
+        padding-left: 2rem;
+        margin-left: 1rem
+    }
+    .footer-menu ul li:first-child {
+        margin-left: 0
+    }
+    .about-section {
+        position: relative;
+        padding: 13rem 0 22rem
+    }
+    .swiper-slide-active,
+    .swiper-slide-next,
+    .swiper-slide-prev {
+        margin-left: 0
+    }
+    .tab-content .about-tab-content iframe,
+    .tab_link {
+        clip-path: polygon(100% 0, 100% 100%, 0 100%, 100% 100%, 0 100%, 0 0)
+    }
+    .mySwiper {
+        height: 92rem;
+        width: 100%;
+        padding-right: 0
+    }
+    .about-tab-text {
+        padding: 0 0 2.7rem 4rem
+    }
+    .swiper-button-next,
+    .swiper-button-prev,
+    .swiper-rtl .swiper-button-next,
+    .swiper-rtl .swiper-button-prev {
+        left: 50%
+    }
+}
