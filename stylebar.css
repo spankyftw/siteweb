@@ -1,0 +1,530 @@
+body {
+    min-height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.fullPageMenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #111;
+    transition: top 0.5s;
+    top: -100%; /* Cache le menu hors de la vue */
+}
+
+.fullPageMenu.active {
+    top: 0; /* Affiche le menu avec une transition */
+}
+
+.fullPageMenu .bannerm {
+    position: relative;
+    width: 900px;
+    height: 100%;
+}
+
+.fullPageMenu .bannerm img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.fullPageMenu .nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.fullPageMenu .nav ul {
+    position: relative;
+}
+
+.fullPageMenu .nav ul li {
+    position: relative;
+    list-style: none;
+    padding: 0 20px;
+    margin: 5px 0;
+    overflow: hidden;
+    display: table;
+}
+
+.fullPageMenu .nav ul li:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ff0047;
+    transition: transform 0.5s ease-in-out;
+    transform: scaleY(0);
+    transform-origin: bottom;
+}
+
+.fullPageMenu .nav ul li:hover:before {
+    transition: transform 0.5s ease-in-out;
+    transform: scaleY(1);
+    transform-origin: top;
+}
+
+.fullPageMenu .nav ul li a {
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    font-size: 4em;
+    font-weight: 700;
+    line-height: 1em;
+    display: inline-block;
+    text-transform: uppercase;
+    transition: 0.5s ease-in-out;
+}
+
+.fullPageMenu .nav ul li a::before {
+    content: attr(data-text);
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    color: #fff;
+}
+
+.fullPageMenu .nav ul li:hover a {
+    transform: translateY(-100%);
+    color: fff;
+}
+
+.menuicon {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background: #ffffff url(https://i.postimg.cc/25t1dMY5/pngegg-1.png);
+    background-size: 40px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: 10px;
+}
+
+.menuicon.active {
+    background: #fff url(https://i.postimg.cc/k4rb3zpp/pngwave.png);
+    background-size: 40px;
+    background-repeat: no-repeat;
+    background-position: 10px;
+}
+
+@media(max-width:991px) {
+    .bannerm {
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body{
+    background: -webkit-linear-gradient(left, #0072ff, #00c6ff);
+    
+}
+.contact-form{
+    background: #fff;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    width: 70%;
+    font-size: large;
+    
+}
+.contact-form .form-control{
+    border-radius:1rem;
+    font-size: large;
+}
+.contact-image{
+    text-align: center;
+}
+.contact-image img{
+    border-radius: 6rem;
+    width: 11%;
+    margin-top: -3%;
+    transform: rotate(29deg);
+}
+.contact-form form{
+    padding: 14%;
+}
+.contact-form form .row{
+    margin-bottom: -7%;
+}
+.contact-form h3{
+    margin-bottom: 8%;
+    margin-top: -10%;
+    text-align: center;
+    color: #0062cc;
+}
+.contact-form .btnContact {
+    width: 50%;
+    border: none;
+    border-radius: 1rem;
+    padding: 1.5%;
+    background: #dc3545;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+}
+.btnContactSubmit
+{
+    width: 50%;
+    border-radius: 1rem;
+    padding: 1.5%;
+    color: #fff;
+    background-color: #0062cc;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,400i,700");
+
+        :root {
+            font-family: "Montserrat";
+            
+
+        }
+
+
+        i {
+            color: inherit;
+            font-size: larger;
+            
+        }
+
+        .banners-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            font-size: larger;
+        
+        }
+
+     
+
+        .banner {
+            color: white;
+            font-weight: 700;
+            padding: 2rem;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            background: red;
+            position: relative;
+            transform: translateY(-100%);
+            opacity: 0;
+            transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
+            font-size: larger;
+            
+        }
+
+        .banner.error {
+            background: #ed1c24;
+            font-size: larger;
+        }
+
+        .banner.success {
+            background: #10c15c;
+            position: relative;
+            font-size: larger;
+           
+        }
+
+        .banner.info {
+            background: #0b22e2;
+            font-size: larger;
+        }
+
+        .banner .banner-message {
+            flex: 1;
+            padding: 0 2rem;
+            font-size: larger;
+        }
+
+        .banner .banner-close {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.5rem;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s;
+            font-size: larger;
+        }
+
+        .banner .banner-close:hover {
+            background: rgba(0, 0, 0, 0.12);
+            font-size: larger;
+        }
+
+        .banner::after {
+            content: "";
+            position: absolute;
+            height: 10%;
+            width: 100%;
+            bottom: 100%;
+            left: 0;
+            background: inherit;
+            font-size: larger;
+        }
+
+        .banner.visible {
+            transform: translateY(0);
+            opacity: 1;
+            font-size: larger;
+        }
+
+        .banner.hiding {
+            transform: translateY(-100%);
+            opacity: 0;
+            font-size: larger;
+        }
+
+
+
+
+
+
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+  z-index: 1001;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
+}
+
+.titlez {
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.group {
+  position: relative;
+}
+
+.form .group label {
+  font-size: 14px;
+  color: rgb(99, 102, 102);
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  background-color: #fff;
+  transition: all .3s ease;
+}
+
+.form .group input,
+.form .group textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  outline: 0;
+  width: 95%;
+  background-color: transparent;
+}
+
+.form .group input:placeholder-shown+label, .form .group textarea:placeholder-shown +label {
+  top: 10px;
+  background-color: transparent;
+}
+
+.form .group input:focus,
+.form .group textarea:focus {
+  border-color: #3366cc;
+}
+
+.form .group input:focus+label, .form .group textarea:focus +label {
+  top: -10px;
+  left: 10px;
+  background-color: #fff;
+  color: #3366cc;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.form .group textarea {
+  resize: none;
+  height: 100px;
+}
+
+.form button {
+  background-color: #3366cc;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.form button:hover {
+  background-color: #27408b;
+}
+
+/* Hidden initially */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.modal.show {
+  display: block;
+  opacity: 1;
+}
+
+.card.show {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+
+/* New Close Button */
+.close-btn {
+  background-color: transparent;
+  color: #333;
+  border: 2px solid #ff5f5f;
+  border-radius: 50%;
+  padding: 5px 10px;
+  cursor: pointer;
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.close-btn:hover {
+  background-color: #ff5f5f;
+  color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
