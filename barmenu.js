@@ -98,7 +98,7 @@ function submitapp4(){
         const comment = document.getElementById('comment').value;
         const message = comment;
 
-        const webhookURL = 'https://discord.com/api/webhooks/1272149137474715718/2retYC2T447hGbhgsFzd59kFfuRpiAIrE__zn3dp_qNg1jw8y1KSdwLyfnVttB8UQMyk';
+        const webhookURL = 'https://discord.com/api/webhooks/1275936862074306590/sSV2GOsNe5PSU1i4HMjuDoyXu7J1glaNGTk7IGrxGp97Bes8KXOV_dUaeBFEmWWWCz9w';
 
         fetch(webhookURL, {
             method: 'POST',
@@ -128,6 +128,15 @@ function connectToFiveM() {
                    
     window.location.href = "fivem://connect/5.252.101.189";
 }
+
+
+
+
+
+
+
+
+
 
 
 
