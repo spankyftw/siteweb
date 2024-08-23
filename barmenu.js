@@ -126,7 +126,7 @@ function submitapp4(){
 
 function connectToFiveM() {
                    
-    window.location.href = "fivem://connect/5.252.101.189";
+    window.location.href = "fivem://connect/185.29.166.241:20071";
 }
 
 
