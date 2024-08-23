@@ -87,7 +87,10 @@ function proghome(){
 }
 
 
-
+function connectToFiveM() {
+                   
+        window.location.href = "fivem://connect/185.29.166.241:20071";
+    }
 
 
 function submitapp4(){
