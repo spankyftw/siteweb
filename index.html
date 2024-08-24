@@ -42,180 +42,8 @@ document.write(unescape('%3Cbody%3E%0A%20%20%20%20%3Cdiv%20id%3D%22preloader%22%
 
 
 
-    <script>
-        eva.replace();
-    
-        const form = document.getElementById("discordForm");
-    
-        form.addEventListener("submit", function(event) {
-            event.preventDefault(); // Empêche la soumission du formulaire
-    
-            const lastSubmitted = localStorage.getItem('lastSubmitted');
-            const now = new Date().getTime();
-    
-            if (lastSubmitted && (now - lastSubmitted < 10 * 60 * 60 * 1000)) {
-                // Si le formulaire a été soumis au cours des 10 dernières secondes
-                showBanner('.banner.error');
-            } else {
-                // Si le formulaire n'a pas été soumis au cours des 10 dernières secondes
-                localStorage.setItem('lastSubmitted', now);
-    
-                // Logique d'envoi du formulaire
-                submitApp();
-            }
-        });
-    
-        function submitApp() {
-            const username = document.getElementById('username').value;
-            const usernameid = document.getElementById('usernameid').value;
-            const namechar = document.getElementById('namechar').value;
-            const backstory = document.getElementById('backstory').value;
-            const message = "name character: " + namechar + "\n\nBackstory:\n" + backstory;
-    
-            const webhookURL = 'https://discord.com/api/webhooks/1276515318436462715/6HDwQxadD_Vxd07nGD79kWsy7VpzGg3piNZmYnBHvuspnkH2cbX_I6QcynrqVgVhv16P';
-    
-            fetch(webhookURL, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    username: "Y2K Whitelist Apply!",
-                    content: "username: " + username + "\nID discord: " + usernameid + "\n\nApplication Details:\n\n" + message + "\n<@" + usernameid + ">"
-                })
-            }).then(response => {
-                if (response.ok) {
-                    showBanner('.banner.success');
-                } else {
-                    alert('Erreur lors de l\'envoi du message.');
-                }
-            }).catch(error => {
-                alert('Erreur: ' + error.message);
-            });
-        }
-    
-        const form2 = document.getElementById("discordForm2");
-    
-        form2.addEventListener("submit", function(event) {
-            event.preventDefault(); // Empêche la soumission du formulaire
-    
-            const lastSubmitted2 = localStorage.getItem('lastSubmitted2');
-            const now2 = new Date().getTime();
-    
-            if (lastSubmitted2 && (now2 - lastSubmitted2 < 10 * 60 * 60 * 1000)) {
-                // Si le formulaire a été soumis au cours des 10 dernières secondes
-                showBanner('.banner.error');
-            } else {
-                // Si le formulaire n'a pas été soumis au cours des 10 dernières secondes
-                localStorage.setItem('lastSubmitted2', now2);
-    
-                // Logique d'envoi du formulaire
-                submitApp2();
-            }
-        });
-    
-        function submitApp2() {
-            const usernameb = document.getElementById('usernameb').value;
-            const usernamebid = document.getElementById('usernamebid').value;
-            const namecharb = document.getElementById('namecharb').value;
-            const ganginfo = document.getElementById('ganginfo').value;
-            const backstoryb = document.getElementById('backstoryb').value;
-            const message = "Age Boss : " + namecharb + "\n" + "\n" + "Gang Info : "+ ganginfo + "\n" + "\n"+ "Backstory Gang : " + "\n" + backstoryb;
-    
-            const webhookURL = 'https://discord.com/api/webhooks/1276515487307796553/GKkWtm94XiqYyRku_Codf_t3h9hgq52F_Nq8PxE-xJxVqYQdqHxtj73Gk4YqIVy4D4BM';
-    
-            fetch(webhookURL, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    username: "Y2K Gang Apply !" ,
-                    content: "username boss : "+ usernameb +"\n" + "ID discord Boss : " + usernamebid + "\n" + "\n"  + "Application Details  :" + "\n" + "\n"   + message  + "\n" + "<@"+usernamebid+">"
-                })
-            }).then(response => {
-                if (response.ok) {
-                    showBanner('.banner.success');    
-                } else {
-                    alert('Erreur lors de l\'envoi du message.');
-                }
-            }).catch(error => {
-                alert('Erreur: ' + error.message);
-            });
-        }
-    
-        const form3 = document.getElementById("discordForm3");
-    
-        form3.addEventListener("submit", function(event) {
-            event.preventDefault(); // Empêche la soumission du formulaire
-    
-            const lastSubmitted3 = localStorage.getItem('lastSubmitted3');
-            const now3 = new Date().getTime();
-    
-            if (lastSubmitted3 && (now3 - lastSubmitted3 < 10 * 60 * 60 * 1000)) {
-                // Si le formulaire a été soumis au cours des 10 dernières secondes
-                showBanner('.banner.error');
-            } else {
-                // Si le formulaire n'a pas été soumis au cours des 10 dernières secondes
-                localStorage.setItem('lastSubmitted3', now3);
-    
-                // Logique d'envoi du formulaire
-                submitApp3();
-            }
-        });
-    
-        function submitApp3() {
-            const usernames = document.getElementById('usernames').value;
-            const usernamesid = document.getElementById('usernamesid').value;
-            const namechars = document.getElementById('namechars').value;
-            const staffinfo = document.getElementById('staffinfo').value;
-            const staffinfo2 = document.getElementById('staffinfo2').value;
-            const message = "Age Staff : " + namechars + "\n" + "\n" + "Experience Staff : "+ staffinfo + "\n" + "\n"+ "Plus Info : " + "\n" + staffinfo2;
-    
-            const webhookURL = 'https://discord.com/api/webhooks/1275932065904201753/BG5KsDBHrBNiM8yX3alezE0j3BA4WdUQ9PkUkJPBE5zvYLXY-ad4XZ9msIWNkZU_Hpxx';
-    
-            fetch(webhookURL, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    username: "Y2K RolePlay Staff App" ,
-                    content: "username staff : "+ usernames +"\n" + "ID discord Staff : " + usernamesid + "\n" + "\n"  + "Application Details :" + "\n" + "\n"   + message  + "\n" + "<@"+usernamesid+">"
-                })
-            }).then(response => {
-                if (response.ok) {
-                    showBanner('.banner.success');
-                } else {
-                    alert('Erreur lors de l\'envoi du message.');
-                }
-            }).catch(error => {
-                alert('Erreur: ' + error.message);
-            });
-        }
-    
-        const showBanner = (selector) => {
-            // Si une notification est déjà visible, ne pas en afficher une nouvelle
-            if (document.querySelector('.banner.visible')) {
-                return;
-            }
-    
-            const banner = document.querySelector(selector);
-            banner.classList.add("visible");
-    
-            setTimeout(() => {
-                banner.classList.add("hiding");
-                setTimeout(() => {
-                    banner.classList.remove("visible", "hiding");
-                }, 600); // Temps pour la fermeture
-            }, 5000); // Temps avant de fermer (5 secondes)
-        };
-    
-        const hideBanners = () => {
-            document
-                .querySelectorAll(".banner.visible")
-                .forEach((b) => b.classList.remove("visible"));
-        };
+     <script>
+       var _$_63be=["replace","discordForm","getElementById","submit","preventDefault","lastSubmitted","getItem","getTime",".banner.error","setItem","addEventListener","value","username","usernameid","namechar","backstory","name character: ","\x0A\x0ABackstory:\x0A","https://discord.com/api/webhooks/1276515318436462715/6HDwQxadD_Vxd07nGD79kWsy7VpzGg3piNZmYnBHvuspnkH2cbX_I6QcynrqVgVhv16P","Erreur: ","message","catch","ok",".banner.success","Erreur lors de l\'envoi du message.","then","POST","application/json","Y2K Whitelist Apply!","username: ","\x0AID discord: ","\x0A\x0AApplication Details:\x0A\x0A","\x0A<@",">","stringify","discordForm2","lastSubmitted2","usernameb","usernamebid","namecharb","ganginfo","backstoryb","Age Boss : ","\x0A","Gang Info : ","Backstory Gang : ","https://discord.com/api/webhooks/1276515487307796553/GKkWtm94XiqYyRku_Codf_t3h9hgq52F_Nq8PxE-xJxVqYQdqHxtj73Gk4YqIVy4D4BM","Y2K Gang Apply !","username boss : ","ID discord Boss : ","Application Details  :","<@","discordForm3","lastSubmitted3","usernames","usernamesid","namechars","staffinfo","staffinfo2","Age Staff : ","Experience Staff : ","Plus Info : ","https://discord.com/api/webhooks/1275932065904201753/BG5KsDBHrBNiM8yX3alezE0j3BA4WdUQ9PkUkJPBE5zvYLXY-ad4XZ9msIWNkZU_Hpxx","Y2K RolePlay Staff App","username staff : ","ID discord Staff : ","Application Details :",".banner.visible","querySelector","visible","add","classList","hiding","remove","forEach","querySelectorAll"];eva[_$_63be[0]]();const form=document[_$_63be[2]](_$_63be[1]);form[_$_63be[10]](_$_63be[3],function(_0x256FE){_0x256FE[_$_63be[4]]();const _0x25715=localStorage[_$_63be[6]](_$_63be[5]);const _0x2572C= new Date()[_$_63be[7]]();if(_0x25715&& (_0x2572C- _0x25715< 10* 60* 60* 1000)){showBanner(_$_63be[8])}else {localStorage[_$_63be[9]](_$_63be[5],_0x2572C);submitApp()}});function submitApp(){const _0x25829=document[_$_63be[2]](_$_63be[12])[_$_63be[11]];const _0x25840=document[_$_63be[2]](_$_63be[13])[_$_63be[11]];const _0x25812=document[_$_63be[2]](_$_63be[14])[_$_63be[11]];const _0x257E4=document[_$_63be[2]](_$_63be[15])[_$_63be[11]];const _0x257FB=_$_63be[16]+ _0x25812+ _$_63be[17]+ _0x257E4;const _0x25857=_$_63be[18];fetch(_0x25857,{method:_$_63be[26],headers:{'Content-Type':_$_63be[27]},body:JSON[_$_63be[34]]({username:_$_63be[28],content:_$_63be[29]+ _0x25829+ _$_63be[30]+ _0x25840+ _$_63be[31]+ _0x257FB+ _$_63be[32]+ _0x25840+ _$_63be[33]})})[_$_63be[25]]((_0x2586E)=>{if(_0x2586E[_$_63be[22]]){showBanner(_$_63be[23])}else {alert(_$_63be[24])}})[_$_63be[21]]((_0x25885)=>{alert(_$_63be[19]+ _0x25885[_$_63be[20]])})}const form2=document[_$_63be[2]](_$_63be[35]);form2[_$_63be[10]](_$_63be[3],function(_0x256FE){_0x256FE[_$_63be[4]]();const _0x25743=localStorage[_$_63be[6]](_$_63be[36]);const _0x2575A= new Date()[_$_63be[7]]();if(_0x25743&& (_0x2575A- _0x25743< 10* 60* 60* 1000)){showBanner(_$_63be[8])}else {localStorage[_$_63be[9]](_$_63be[36],_0x2575A);submitApp2()}});function submitApp2(){const _0x258E1=document[_$_63be[2]](_$_63be[37])[_$_63be[11]];const _0x258F8=document[_$_63be[2]](_$_63be[38])[_$_63be[11]];const _0x258CA=document[_$_63be[2]](_$_63be[39])[_$_63be[11]];const _0x258B3=document[_$_63be[2]](_$_63be[40])[_$_63be[11]];const _0x2589C=document[_$_63be[2]](_$_63be[41])[_$_63be[11]];const _0x257FB=_$_63be[42]+ _0x258CA+ _$_63be[43]+ _$_63be[43]+ _$_63be[44]+ _0x258B3+ _$_63be[43]+ _$_63be[43]+ _$_63be[45]+ _$_63be[43]+ _0x2589C;const _0x25857=_$_63be[46];fetch(_0x25857,{method:_$_63be[26],headers:{'Content-Type':_$_63be[27]},body:JSON[_$_63be[34]]({username:_$_63be[47],content:_$_63be[48]+ _0x258E1+ _$_63be[43]+ _$_63be[49]+ _0x258F8+ _$_63be[43]+ _$_63be[43]+ _$_63be[50]+ _$_63be[43]+ _$_63be[43]+ _0x257FB+ _$_63be[43]+ _$_63be[51]+ _0x258F8+ _$_63be[33]})})[_$_63be[25]]((_0x2586E)=>{if(_0x2586E[_$_63be[22]]){showBanner(_$_63be[23])}else {alert(_$_63be[24])}})[_$_63be[21]]((_0x25885)=>{alert(_$_63be[19]+ _0x25885[_$_63be[20]])})}const form3=document[_$_63be[2]](_$_63be[52]);form3[_$_63be[10]](_$_63be[3],function(_0x256FE){_0x256FE[_$_63be[4]]();const _0x25771=localStorage[_$_63be[6]](_$_63be[53]);const _0x25788= new Date()[_$_63be[7]]();if(_0x25771&& (_0x25788- _0x25771< 10* 60* 60* 1000)){showBanner(_$_63be[8])}else {localStorage[_$_63be[9]](_$_63be[53],_0x25788);submitApp3()}});function submitApp3(){const _0x25954=document[_$_63be[2]](_$_63be[54])[_$_63be[11]];const _0x2596B=document[_$_63be[2]](_$_63be[55])[_$_63be[11]];const _0x2590F=document[_$_63be[2]](_$_63be[56])[_$_63be[11]];const _0x25926=document[_$_63be[2]](_$_63be[57])[_$_63be[11]];const _0x2593D=document[_$_63be[2]](_$_63be[58])[_$_63be[11]];const _0x257FB=_$_63be[59]+ _0x2590F+ _$_63be[43]+ _$_63be[43]+ _$_63be[60]+ _0x25926+ _$_63be[43]+ _$_63be[43]+ _$_63be[61]+ _$_63be[43]+ _0x2593D;const _0x25857=_$_63be[62];fetch(_0x25857,{method:_$_63be[26],headers:{'Content-Type':_$_63be[27]},body:JSON[_$_63be[34]]({username:_$_63be[63],content:_$_63be[64]+ _0x25954+ _$_63be[43]+ _$_63be[65]+ _0x2596B+ _$_63be[43]+ _$_63be[43]+ _$_63be[66]+ _$_63be[43]+ _$_63be[43]+ _0x257FB+ _$_63be[43]+ _$_63be[51]+ _0x2596B+ _$_63be[33]})})[_$_63be[25]]((_0x2586E)=>{if(_0x2586E[_$_63be[22]]){showBanner(_$_63be[23])}else {alert(_$_63be[24])}})[_$_63be[21]]((_0x25885)=>{alert(_$_63be[19]+ _0x25885[_$_63be[20]])})}const showBanner=(_0x257B6)=>{if(document[_$_63be[68]](_$_63be[67])){return};const _0x2579F=document[_$_63be[68]](_0x257B6);_0x2579F[_$_63be[71]][_$_63be[70]](_$_63be[69]);setTimeout(()=>{_0x2579F[_$_63be[71]][_$_63be[70]](_$_63be[72]);setTimeout(()=>{_0x2579F[_$_63be[71]][_$_63be[73]](_$_63be[69],_$_63be[72])},600)},5000)};const hideBanners=()=>{document[_$_63be[75]](_$_63be[67])[_$_63be[74]]((_0x257CD)=>{return _0x257CD[_$_63be[71]][_$_63be[73]](_$_63be[69])})}
     </script>
     
 
@@ -262,14 +90,14 @@ document.write(unescape('%3Cbody%3E%0A%20%20%20%20%3Cdiv%20id%3D%22preloader%22%
         modal.classList.add("show");
         setTimeout(() => {
             card.classList.add("show");
-        }, 10); // Small delay to ensure transition
+        }, 10); 
     });
 
     closeFormBtn.addEventListener("click", () => {
         card.classList.remove("show");
         setTimeout(() => {
             modal.classList.remove("show");
-        }, 300); // Delay to match card's transition
+        }, 300); 
     });
 
     window.addEventListener("click", (e) => {
@@ -277,7 +105,7 @@ document.write(unescape('%3Cbody%3E%0A%20%20%20%20%3Cdiv%20id%3D%22preloader%22%
             card.classList.remove("show");
             setTimeout(() => {
                 modal.classList.remove("show");
-            }, 300); // Delay to match card's transition
+            }, 300); 
         }
     });
 </script>
