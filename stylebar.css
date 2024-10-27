@@ -189,6 +189,7 @@ body{
     margin-top: 10%;
     margin-bottom: 5%;
     width: 70%;
+    height: 700px;
     font-size: large;
     
 }
@@ -500,6 +501,13 @@ body{
 .close-btn:hover {
   background-color: #ff5f5f;
   color: #fff;
+}
+
+
+
+
+iframe{
+    margin-left: 29%;
 }
 
 
